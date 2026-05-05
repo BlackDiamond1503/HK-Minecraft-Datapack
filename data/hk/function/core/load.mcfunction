@@ -11,6 +11,9 @@ scoreboard objectives add hk.wings.levitation dummy
 
 scoreboard objectives add hk.health dummy
 scoreboard objectives add hk.health.max dummy
+scoreboard objectives add hk.health.damage dummy
+
+scoreboard players set @a hk.health.damage 1
 
 scoreboard objectives add hk.soul dummy
 scoreboard objectives add hk.soul.max dummy

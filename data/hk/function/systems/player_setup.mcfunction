@@ -3,7 +3,8 @@ scoreboard players set @s hk.health 5
 scoreboard players set @s hk.soul 0
 scoreboard players set @s hk.soul.max 99
 
-attribute @s jump_strength base set 0.65
+attribute @s jump_strength base set 0.60
+attribute @s gravity base set 0.05
 attribute @s scale base set 1
 attribute @s minecraft:knockback_resistance base set 1
 

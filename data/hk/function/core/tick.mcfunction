@@ -24,4 +24,6 @@ function hk:systems/player_init
 function hk:soul/ui
 
 execute as @a[scores={hk.health=1..}] if entity @s[nbt={HurtTime:9s}] run function hk:systems/damage
+execute as @a[scores={hk.health=0}] at @s run kill @s
+execute as @a[scores={hk.health=0}] at @s run scoreboard players set @s hk.health 5
 

@@ -13,6 +13,9 @@ execute if score @s hk.wings.used matches 1.. run return 0
 # Detect start of sneaking this tick (using sneak_time)
 execute unless score @s hk.sneak matches 1.. run return 0
 
+attribute @s gravity base set 0.1
+schedule function hk:schedules/gravity_reset 10t
+
 # === Monarch Wings Double Jump ACTIVATED ===
 scoreboard players set @s hk.wings.used 1
 
