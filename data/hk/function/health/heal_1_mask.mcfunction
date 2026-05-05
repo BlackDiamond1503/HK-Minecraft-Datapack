@@ -1,0 +1,1 @@
+execute as @s if score @s hk.health < @s hk.health.max run scoreboard players add @s hk.health 1

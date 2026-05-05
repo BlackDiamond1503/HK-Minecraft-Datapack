@@ -1,0 +1,3 @@
+execute unless predicate hk:on_ground as @s run execute at @s run summon wind_charge ~ ~-0.1 ~ {Motion:[0.0,0.1,0.0],ExplosionPower:0,Tags:["instant_boost", "hk.no_damage"],NoGravity:1b}
+
+scoreboard players set @s hk.wings.used 0

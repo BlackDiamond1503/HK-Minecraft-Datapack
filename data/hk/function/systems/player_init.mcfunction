@@ -1,0 +1,1 @@
+execute as @a unless score @s hk.health.max matches 1.. run function hk:systems/player_setup

@@ -1,0 +1,11 @@
+scoreboard players set @s hk.health.max 5
+scoreboard players set @s hk.health 5
+scoreboard players set @s hk.soul 0
+scoreboard players set @s hk.soul.max 99
+
+attribute @s jump_strength base set 0.65
+attribute @s scale base set 1
+attribute @s minecraft:knockback_resistance base set 1
+
+# Force initial health sync
+function hk:systems/health_sync
