@@ -12,11 +12,6 @@ execute as @a if predicate hk:on_ground run scoreboard players set @s hk.wings.u
 execute as @a[scores={hk.soul.use=1..}] if items entity @s weapon.mainhand *[custom_data~{hk_soul_item:1}] run function hk:soul/use
 scoreboard players set @a hk.soul.use 0
 
-execute as @a[scores={hk.wings.levitation=3..3}] at @s run attribute @s gravity base set 0.08
-execute as @a[scores={hk.wings.levitation=3..3}] at @s run scoreboard players set @s hk.wings.levitation 0
-
-execute as @a[scores={hk.wings.levitation=1..2}] at @s run scoreboard players add @s hk.wings.levitation 1
-
 # Reset sneak tracking for next tick
 execute as @a run scoreboard players set @s hk.sneak 0
 
@@ -27,5 +22,6 @@ function hk:systems/health_sync
 function hk:systems/hunger_disabling
 function hk:systems/player_init
 function hk:soul/ui
+
 execute as @a[scores={hk.health=1..}] if entity @s[nbt={HurtTime:9s}] run function hk:systems/damage
 

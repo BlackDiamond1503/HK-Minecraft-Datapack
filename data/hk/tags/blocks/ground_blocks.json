@@ -1,0 +1,23 @@
+{
+  "values": [
+    "#minecraft:stairs",
+    "#minecraft:slabs",
+    "#minecraft:walls",
+    "#minecraft:leaves",
+    "#minecraft:logs",
+    "#minecraft:planks",
+    "#minecraft:dirt",
+    "#minecraft:stone",
+    "#minecraft:terracotta",
+    "#minecraft:concrete",
+    "#minecraft:concrete_powder",
+    "#minecraft:ice",
+    "#minecraft:packed_ice",
+    "#minecraft:blue_ice",
+    "#minecraft:grass_block",
+    "#minecraft:sand",
+    "#minecraft:gravel",
+    "#minecraft:deepslate",
+    "#minecraft:ore_blocks"
+  ]
+}

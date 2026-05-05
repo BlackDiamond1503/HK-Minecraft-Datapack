@@ -16,11 +16,8 @@ execute unless score @s hk.sneak matches 1.. run return 0
 # === Monarch Wings Double Jump ACTIVATED ===
 scoreboard players set @s hk.wings.used 1
 
-tp @s ~ ~ ~ ~ ~
-attribute @s gravity base set 0.0
-
 # Strong upward boost
-execute at @s run summon wind_charge ~ ~-0.3 ~ {Motion:[0.0, 0.95, 0.0], ExplosionPower:0, Tags:["hk.wings.boost", "hk.no_damage"]}
+execute at @s run summon wind_charge ~ ~-0.3 ~ {Motion:[0.0, 0.3, 0.0], ExplosionPower:0, Tags:["hk.wings.boost", "hk.no_damage"]}
 
 # Hollow Knight visuals
 particle minecraft:cloud ~ ~0.1 ~ 0.4 0.2 0.4 0.1 25 force
