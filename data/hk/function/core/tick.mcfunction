@@ -11,7 +11,7 @@ execute as @a[scores={hk.wings.used=1..}] if predicate hk:on_ground if score @s 
 execute as @a[scores={hk.wings.used=1..}] if score @s hk.tp matches 1 run scoreboard players set @s hk.tp 0
 
 # Soul use
-execute as @a[scores={hk.use=1..}] if items entity @s weapon.mainhand carrot_on_a_stick[custom_data~{hk_soul_item:1b}] run function hk:soul/use
+execute as @a[scores={hk.use=1..}] if items entity @s weapon.mainhand carrot_on_a_stick[custom_data~{hk_soul_item:1}] run function hk:soul/use
 
 # System functions
 effect give @a resistance infinite 5 true

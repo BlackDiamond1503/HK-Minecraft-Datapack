@@ -9,7 +9,7 @@ scoreboard players set @s hk.health.damage 1
 attribute @s jump_strength base set 0.60
 attribute @s gravity base set 0.05
 attribute @s scale base set 1
-attribute @s minecraft:knockback_resistance base set 0
+attribute @s minecraft:knockback_resistance base set 1
 
 # Force initial health sync
 function hk:systems/health_sync

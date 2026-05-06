@@ -1,7 +1,9 @@
 # Check if the player is looking down (45 to 90 degrees)
-execute as @e[type=!player, type=!item, distance=..5.0] at @s run tp ^ ^0.2 ^-1.5
-execute as @e[type=!player, type=!item, distance=..5.0] at @s run particle minecraft:dust_color_transition{from_color:[1.0, 0.5, 0.0], to_color:[1.0, 0.2, 0.0], scale:4} ~ ~1.0 ~ 0.2 0.5 0.2 10.0 10
-execute as @e[type=!player, type=!item, distance=..5.0] at @s run damage @s 5 player_attack by @p
+
+# Possible area nail slash (needs work, usable for nail arts)
+#execute as @e[type=!player, type=!item, distance=..5.0] at @s run tp ^ ^0.2 ^-1.5
+#execute as @e[type=!player, type=!item, distance=..5.0] at @s run particle minecraft:dust_color_transition{from_color:[1.0, 0.5, 0.0], to_color:[1.0, 0.2, 0.0], scale:4} ~ ~1.0 ~ 0.2 0.5 0.2 10.0 10
+#execute as @e[type=!player, type=!item, distance=..5.0] at @s run damage @s 5 player_attack by @p
 
 execute if score @s hk.pitch matches 40..90 run function hk:nail/pogo
 playsound minecraft:block.copper.hit player @a ~ ~ ~ 1.2 1.5
