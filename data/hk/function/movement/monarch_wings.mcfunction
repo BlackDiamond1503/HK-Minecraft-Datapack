@@ -9,10 +9,6 @@ execute if predicate hk:on_ground run return 0
 # Prevent using more than once per air time
 execute if score @s hk.wings.used matches 1.. run return 0
 
-# === ONLY TRIGGER WHEN PRESSING SNEAK ===
-# Detect start of sneaking this tick (using sneak_time)
-execute unless score @s hk.sneak matches 1.. run return 0
-
 attribute @s gravity base set 0.1
 schedule function hk:schedules/gravity_reset 10t
 

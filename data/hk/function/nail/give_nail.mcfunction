@@ -1,4 +1,4 @@
-# === Minimal Nail Give Command ===
+# === Old Nail as Carrot on a Stick (with Sword Texture) ===
 give @s minecraft:netherite_sword[\
   custom_name={text:"Old Nail",  italic:false, color:"gold"},\
   lore=[\
@@ -10,4 +10,4 @@ give @s minecraft:netherite_sword[\
     {type:"minecraft:attack_knockback", slot:"any", id:"hk.nail.knockback", amount:1.5, operation:"add_value"}],\
   rarity=epic,\
   unbreakable={},\
-  custom_data={hk_nail:1b}] 1
+  custom_data={hk_nail:1}] 1

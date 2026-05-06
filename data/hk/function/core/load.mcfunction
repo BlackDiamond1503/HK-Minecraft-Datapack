@@ -4,6 +4,7 @@ scoreboard objectives add hk.pitch dummy
 
 scoreboard objectives add hk.jump minecraft.custom:minecraft.jump
 scoreboard objectives add hk.sneak minecraft.custom:minecraft.sneak_time
+scoreboard objectives add hk.use minecraft.used:minecraft.carrot_on_a_stick
 
 scoreboard objectives add hk.wings.used dummy
 scoreboard objectives add hk.wings.const dummy
@@ -17,7 +18,6 @@ scoreboard players set @a hk.health.damage 1
 
 scoreboard objectives add hk.soul dummy
 scoreboard objectives add hk.soul.max dummy
-scoreboard objectives add hk.soul.use minecraft.used:minecraft.carrot_on_a_stick
 
 scoreboard players set @a hk.health.max 5
 scoreboard players set @a hk.health 5

@@ -6,3 +6,9 @@ v0.4
         - We lack Impact Frames when recieving damage
         - Increasing the attack range would be good
         - Disabling shield will be something to consider in the future
+v0.5
+    - Changed the Old Nail to a carrot on a stick to be able to detect right click when in hand
+    - Changed the general movement abilities binding to having the nail in hand and using the 
+      camera angle to select the ability to use (like with the spells or the pogo when using left
+      click)
+    - Preparing to add other movement abilities

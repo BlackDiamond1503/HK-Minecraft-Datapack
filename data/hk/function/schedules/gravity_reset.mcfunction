@@ -1,1 +1,1 @@
-execute as @a[scores={hk.wings.used=1}] run attribute @s gravity base set 0.06
+execute as @a run attribute @s gravity base set 0.06
