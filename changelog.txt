@@ -12,3 +12,11 @@ v0.5
       camera angle to select the ability to use (like with the spells or the pogo when using left
       click)
     - Preparing to add other movement abilities
+v0.6a
+    - Added focus charge time
+    - Added different spell detection (spell sooldown pending)
+    - Added small fix to pogo and souble jump to make it consistent and have better feeling to use
+    - Smooth focus soul drain animation added
+    - Added sweep attack with the nail to nearby enemies
+    - Added focus particles
+    - Several bugfixes
