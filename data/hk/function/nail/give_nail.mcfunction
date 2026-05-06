@@ -1,5 +1,5 @@
 # === Old Nail as Carrot on a Stick (with Sword Texture) ===
-give @s minecraft:netherite_sword[\
+give @s minecraft:carrot_on_a_stick[\
   custom_name={text:"Old Nail",  italic:false, color:"gold"},\
   lore=[\
     {text:"The Knight's trusted blade", italic:false, color:"gray"}],\

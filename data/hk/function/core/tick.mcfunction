@@ -10,7 +10,7 @@ execute as @a[scores={hk.use=1..}] at @s if items entity @s weapon.mainhand carr
 execute as @a if predicate hk:on_ground run scoreboard players set @s hk.wings.used 0
 
 # Soul use
-execute as @a[scores={hk.use=1..}] if items entity @s weapon.mainhand carrot_on_a_stick[custom_data~{hk_soul_item:1}] run function hk:soul/use
+execute as @a[scores={hk.use=1..}] if items entity @s weapon.mainhand carrot_on_a_stick[custom_data~{hk_soul_item:1b}] run function hk:soul/use
 
 # System functions
 effect give @s resistance infinite 5 true
@@ -22,7 +22,7 @@ function hk:soul/ui
 # Reset trakings for next tick
 execute as @a[scores={hk.use=1..}] at @s run scoreboard players set @s hk.use 0
 execute as @a[scores={hk.nail.swing=1..}] at @s run scoreboard players set @s hk.nail.swing 0
-execute as @a[scores={hk.use=1..}] at @s run scoreboard players set @s hk.soul.use 0
+execute as @a[scores={hk.use=1..}] at @s run scoreboard players set @s hk.use 0
 execute as @a[scores={hk.sneak=1..}] at @s run scoreboard players set @s hk.sneak 0
 execute as @e[nbt={HurtTime:10s}, type=!player] at @s run particle minecraft:dust_color_transition{from_color:[1.0, 0.5, 0.0], to_color:[1.0, 0.2, 0.0], scale:4} ~ ~1.0 ~ 0.2 0.5 0.2 20.0 10
 
