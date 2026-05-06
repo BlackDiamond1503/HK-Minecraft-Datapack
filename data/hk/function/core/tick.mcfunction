@@ -3,7 +3,8 @@ execute as @a run execute store result score @s hk.pitch run data get entity @s 
 
 # Nail use
 execute as @a[scores={hk.nail.swing=1..}] at @s if items entity @s weapon.mainhand carrot_on_a_stick[custom_data={hk_nail:1}] run function hk:nail/nail_slash
-execute as @a[scores={hk.use=1..}] at @s if items entity @s weapon.mainhand carrot_on_a_stick[custom_data={hk_nail:1}] if predicate hk:has_monarch_wings if score @s hk.pitch matches -90..-40 run function hk:movement/monarch_wings
+execute as @a[scores={hk.use=1..}] at @s if items entity @s weapon.mainhand carrot_on_a_stick[custom_data={hk_nail:1}] if predicate hk:has_monarch_wings if score @s hk.pitch matches -90..-30 run function hk:movement/monarch_wings
+execute as @a[scores={hk.use=1..}] at @s if items entity @s weapon.mainhand carrot_on_a_stick[custom_data={hk_nail:1}] if predicate hk:has_monarch_wings if score @s hk.pitch matches -30..40 run function hk:movement/dash
 
 # Ability resets
 execute as @a if predicate hk:on_ground run scoreboard players set @s hk.wings.used 0
