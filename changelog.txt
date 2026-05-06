@@ -1,0 +1,8 @@
+v0.4
+    - Created changelog file to keep track of changes
+    - Fixed notorius bug with damage system: Wind Charge boost causes 1 mask damage
+    - Feedback:
+        - Combat feels somewhat good
+        - We lack Impact Frames when recieving damage
+        - Increasing the attack range would be good
+        - Disabling shield will be something to consider in the future

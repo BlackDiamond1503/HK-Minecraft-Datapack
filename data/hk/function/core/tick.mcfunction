@@ -18,12 +18,11 @@ execute as @a run scoreboard players set @s hk.sneak 0
 #execute as @e[nbt={HurtTime:10s}] if predicate hk:is_not_player at @s run particle minecraft:lava ~ ~1 ~ 0.2 0.5 0.2 0.05 20
 execute as @e[nbt={HurtTime:10s}, type=!player] at @s run particle minecraft:dust_color_transition{from_color:[1.0, 0.5, 0.0], to_color:[1.0, 0.2, 0.0], scale:4} ~ ~1.0 ~ 0.2 0.5 0.2 20.0 10
 
+effect give @s resistance infinite 5 true
 function hk:systems/health_sync
 function hk:systems/hunger_disabling
 function hk:systems/player_init
 function hk:soul/ui
 
-execute as @a[scores={hk.health=1..}] if entity @s[nbt={HurtTime:9s}] run function hk:systems/damage
 execute as @a[scores={hk.health=0}] at @s run kill @s
 execute as @a[scores={hk.health=0}] at @s run scoreboard players set @s hk.health 5
-
