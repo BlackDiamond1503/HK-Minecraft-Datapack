@@ -37,6 +37,9 @@ scoreboard objectives add hk.soul.ui dummy
 scoreboard objectives add hk.soul.max dummy
 scoreboard objectives add hk.soul.focus.time dummy
 scoreboard objectives add hk.soul.used dummy
+scoreboard objectives add hk.soul.spell_use_timer dummy
+
+scoreboard objectives add hk.spirit.timer dummy
 
 scoreboard players set @a hk.iframes 0
 

@@ -8,7 +8,7 @@ execute unless predicate hk:has_monarch_wings run return 0
 # Prevent using more than once per air time
 execute if score @s hk.wings.used matches 1.. run return 0
 
-attribute @s gravity base set 0.15
+attribute @s gravity base set 0.13
 schedule function hk:schedules/gravity_reset 6t
 
 # === Monarch Wings Double Jump ACTIVATED ===

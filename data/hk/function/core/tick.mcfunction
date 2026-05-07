@@ -17,8 +17,13 @@ execute as @a[scores={hk.dash.used=1..}] if score @s hk.tp matches 1 run scorebo
 execute as @a[scores={hk.use=1..}] if items entity @s weapon.mainhand carrot_on_a_stick[custom_data~{hk_soul_item:1}] run function hk:soul/use
 
 # System functions
+execute as @a[scores={hk.soul.spell_use_timer=..0}] at @s run scoreboard players add @s hk.soul.spell_use_timer 1
 execute as @a[scores={hk.dash.colldown_left=..0}] at @s run scoreboard players add @s hk.dash.colldown_left 1
 effect give @a resistance infinite 5 true
+
+# Speel updates
+execute as @e[tag=hk.spirit] at @s run function hk:soul/spells/vs_spell
+
 function hk:systems/health_sync
 function hk:systems/hunger_disabling
 function hk:systems/player_init
