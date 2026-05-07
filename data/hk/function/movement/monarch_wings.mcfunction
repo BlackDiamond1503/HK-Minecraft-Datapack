@@ -1,5 +1,7 @@
 # hk:movement/monarch_wings
 
+execute if predicate hk:on_ground run return 0
+
 # Only if wearing Monarch Wings
 execute unless predicate hk:has_monarch_wings run return 0
 
@@ -7,7 +9,7 @@ execute unless predicate hk:has_monarch_wings run return 0
 execute if score @s hk.wings.used matches 1.. run return 0
 
 attribute @s gravity base set 0.15
-schedule function hk:schedules/gravity_reset 7t
+schedule function hk:schedules/gravity_reset 6t
 
 # === Monarch Wings Double Jump ACTIVATED ===
 scoreboard players set @s hk.wings.used 1
@@ -24,5 +26,3 @@ particle minecraft:glow ~ ~0.3 ~ 0.2 0.3 0.2 0.0 10 force
 
 # Sounds
 playsound minecraft:entity.firework_rocket.launch player @a ~ ~ ~ 0.7 1.6
-
-scoreboard players add @s hk.wings.levitation 1

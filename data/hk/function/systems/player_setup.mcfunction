@@ -4,9 +4,12 @@ scoreboard players set @s hk.soul 0
 scoreboard players set @s hk.soul.ui 0
 scoreboard players set @s hk.soul.max 99
 scoreboard players set @s hk.wings.used 0
+scoreboard players set @s hk.dash.used 0
+scoreboard players set @s hk.dash.colldown -20
+scoreboard players set @s hk.dash.colldown_left 0
 scoreboard players set @s hk.health.damage 1
 
-attribute @s jump_strength base set 0.60
+attribute @s jump_strength base set 0.65
 attribute @s gravity base set 0.05
 attribute @s scale base set 1
 attribute @s minecraft:knockback_resistance base set 1

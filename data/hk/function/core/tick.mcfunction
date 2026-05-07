@@ -1,19 +1,23 @@
-# Camera pitch storing
+# Camera angle storing
 execute as @a run execute store result score @s hk.pitch run data get entity @s Rotation[1]
+execute as @a run execute store result score @s hk.yaw run data get entity @s Rotation[0]
 
 # Nail use
 execute as @a[scores={hk.nail.swing=1..}] at @s if items entity @s weapon.mainhand carrot_on_a_stick[custom_data={hk_nail:1}] run function hk:nail/nail_slash
 execute as @a[scores={hk.use=1..}] at @s if items entity @s weapon.mainhand carrot_on_a_stick[custom_data={hk_nail:1}] if predicate hk:has_monarch_wings if score @s hk.pitch matches -90..-30 run function hk:movement/monarch_wings
-execute as @a[scores={hk.use=1..}] at @s if items entity @s weapon.mainhand carrot_on_a_stick[custom_data={hk_nail:1}] if score @s hk.pitch matches -30..40 run function hk:movement/dash
+execute as @a[scores={hk.use=1..}] at @s if items entity @s weapon.mainhand carrot_on_a_stick[custom_data={hk_nail:1}] if score @s hk.pitch matches -31..40 run function hk:movement/dash
 
 # Ability resets
 execute as @a[scores={hk.wings.used=1..}] if predicate hk:on_ground if score @s hk.tp matches 0 run scoreboard players set @s hk.wings.used 0
+execute as @a[scores={hk.dash.used=1..}] if predicate hk:on_ground if score @s hk.tp matches 0 run scoreboard players set @s hk.dash.used 0
 execute as @a[scores={hk.wings.used=1..}] if score @s hk.tp matches 1 run scoreboard players set @s hk.tp 0
+execute as @a[scores={hk.dash.used=1..}] if score @s hk.tp matches 1 run scoreboard players set @s hk.tp 0
 
 # Soul use
 execute as @a[scores={hk.use=1..}] if items entity @s weapon.mainhand carrot_on_a_stick[custom_data~{hk_soul_item:1}] run function hk:soul/use
 
 # System functions
+execute as @a[scores={hk.dash.colldown_left=..0}] at @s run scoreboard players add @s hk.dash.colldown_left 1
 effect give @a resistance infinite 5 true
 function hk:systems/health_sync
 function hk:systems/hunger_disabling

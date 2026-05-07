@@ -22,3 +22,10 @@ v0.6a
     - Several bugfixes
 v0.7
     - General fixes
+v0.8
+    - Introduced Dash
+        - Can be used once until refill
+        - Can be chained with monarch wings like in hk
+        - Refills instantly on pogo
+        - No shadow dash for now
+    - Fixed some bugs
