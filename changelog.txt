@@ -36,3 +36,10 @@ v0.9
         - Speed is of 5b/s
         - Bug: After some time starts deaccelerating, not fast enough to notice right away
     - Added the temporal no gravity effect of the vengeful spirit (No knockback yet)
+v0.9.1
+    - Added C-dash charge time (5 ticks)
+    - To charge C-dash: Sneak while r-clicking with the nail, wait a quarter of a sec, then realease sneak
+    - To stop C-Dash you can stop on a wall or sneak mid dash to stop manually
+    - Nerfed Vengeful Spirit: 
+        - Damage: 20 -> 15
+        - Added the air halt time (10 ticks)

@@ -30,9 +30,7 @@ scoreboard objectives add hk.dash.colldown_left dummy
 
 # C-Dash thingys
 scoreboard objectives add hk.c-dash.using dummy
-scoreboard objectives add hk.c-dash.x dummy
-scoreboard objectives add hk.c-dash.y dummy
-scoreboard objectives add hk.c-dash.z dummy
+scoreboard objectives add hk.c-dash.charge_time dummy
 
 scoreboard objectives add hk.health dummy
 scoreboard objectives add hk.health.max dummy

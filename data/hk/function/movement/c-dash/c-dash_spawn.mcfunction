@@ -37,7 +37,5 @@ execute as @s if score @s hk.yaw matches 156..165 at @s rotated ~ 0 run summon a
 execute as @s if score @s hk.yaw matches 166..175 at @s rotated ~ 0 run summon arrow ^ ^0.5 ^1 {Tags:["hk.c-dash"], NoGravity:1b, PierceLevel:5, Motion:[-0.870d, 0d, -4.925d]}
 execute as @s if score @s hk.yaw matches 176..180 at @s rotated ~ 0 run summon arrow ^ ^0.5 ^1 {Tags:["hk.c-dash"], NoGravity:1b, PierceLevel:5, Motion:[0.000d, 0d, -5.000d]}
 ride @s mount @e[tag=hk.c-dash, limit=1, sort=nearest]
+scoreboard players set @s hk.c-dash.charge_time 0
 scoreboard players set @s hk.c-dash.using 1
-execute as @e[tag=hk.c-dash, limit=1, sort=nearest] store result score @s hk.c-dash.x run data get entity @s Motion[0] 1000
-execute as @e[tag=hk.c-dash, limit=1, sort=nearest] store result score @s hk.c-dash.y run data get entity @s Motion[1] 1000
-execute as @e[tag=hk.c-dash, limit=1, sort=nearest] store result score @s hk.c-dash.z run data get entity @s Motion[2] 1000
