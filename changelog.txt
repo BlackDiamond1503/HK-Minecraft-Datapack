@@ -29,3 +29,10 @@ v0.8
         - Refills instantly on pogo
         - No shadow dash for now
     - Fixed some bugs
+v0.9
+    - Introduced C-Dash
+        - Does not have charge time yet
+        - Can penetrate mobs but does not cause damage to player nor stops the dash
+        - Speed is of 5b/s
+        - Bug: After some time starts deaccelerating, not fast enough to notice right away
+    - Added the temporal no gravity effect of the vengeful spirit (No knockback yet)

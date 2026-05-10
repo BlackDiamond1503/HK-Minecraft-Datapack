@@ -4,8 +4,11 @@ execute as @a run execute store result score @s hk.yaw run data get entity @s Ro
 
 # Nail use
 execute as @a[scores={hk.nail.swing=1..}] at @s if items entity @s weapon.mainhand carrot_on_a_stick[custom_data={hk_nail:1}] run function hk:nail/nail_slash
-execute as @a[scores={hk.use=1..}] at @s if items entity @s weapon.mainhand carrot_on_a_stick[custom_data={hk_nail:1}] if predicate hk:has_monarch_wings if score @s hk.pitch matches -90..-30 run function hk:movement/monarch_wings
-execute as @a[scores={hk.use=1..}] at @s if items entity @s weapon.mainhand carrot_on_a_stick[custom_data={hk_nail:1}] if score @s hk.pitch matches -31..40 run function hk:movement/dash
+execute as @a[scores={hk.use=1..}] at @s unless predicate hk:sneaking unless score @s hk.c-dash.using matches 1.. if items entity @s weapon.mainhand carrot_on_a_stick[custom_data={hk_nail:1}] if predicate hk:has_monarch_wings if score @s hk.pitch matches -90..-30 run function hk:movement/monarch_wings
+execute as @a[scores={hk.use=1..}] at @s unless predicate hk:sneaking unless score @s hk.c-dash.using matches 1.. if items entity @s weapon.mainhand carrot_on_a_stick[custom_data={hk_nail:1}] if score @s hk.pitch matches -31..40 run function hk:movement/dash
+execute as @a[scores={hk.use=1..}] at @s if predicate hk:on_ground unless predicate hk:sneaking unless score @s hk.c-dash.using matches 1.. if items entity @s weapon.mainhand carrot_on_a_stick[custom_data={hk_nail:1}] if score @s hk.pitch matches 41..90 run function hk:movement/c-dash/c-dash_spawn
+
+execute as @a[scores={hk.c-dash.using=1..}] at @s run function hk:movement/c-dash
 
 # Ability resets
 execute as @a[scores={hk.wings.used=1..}] if predicate hk:on_ground if score @s hk.tp matches 0 run scoreboard players set @s hk.wings.used 0
@@ -14,15 +17,16 @@ execute as @a[scores={hk.wings.used=1..}] if score @s hk.tp matches 1 run scoreb
 execute as @a[scores={hk.dash.used=1..}] if score @s hk.tp matches 1 run scoreboard players set @s hk.tp 0
 
 # Soul use
-execute as @a[scores={hk.use=1..}] if items entity @s weapon.mainhand carrot_on_a_stick[custom_data~{hk_soul_item:1}] run function hk:soul/use
+execute as @a[scores={hk.use=1..}] unless score @s hk.c-dash.using matches 1.. if items entity @s weapon.mainhand carrot_on_a_stick[custom_data~{hk_soul_item:1}] run function hk:soul/use
 
 # System functions
 execute as @a[scores={hk.soul.spell_use_timer=..0}] at @s run scoreboard players add @s hk.soul.spell_use_timer 1
 execute as @a[scores={hk.dash.colldown_left=..0}] at @s run scoreboard players add @s hk.dash.colldown_left 1
 effect give @a resistance infinite 5 true
 
-# Speel updates
+# Spell updates
 execute as @e[tag=hk.spirit] at @s run function hk:soul/spells/vs_spell
+
 
 function hk:systems/health_sync
 function hk:systems/hunger_disabling

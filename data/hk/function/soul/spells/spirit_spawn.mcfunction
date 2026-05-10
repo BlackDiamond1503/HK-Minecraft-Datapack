@@ -36,4 +36,9 @@ execute as @s if score @s hk.yaw matches 156..165 at @s rotated ~ 0 run summon a
 execute as @s if score @s hk.yaw matches 166..175 at @s rotated ~ 0 run summon arrow ^ ^1.0 ^1 {Tags:["hk.spirit"], NoGravity:1b, PierceLevel:5, Motion:[-0.870d, 0d, -4.925d]}
 execute as @s if score @s hk.yaw matches 176..180 at @s rotated ~ 0 run summon arrow ^ ^1.0 ^1 {Tags:["hk.spirit"], NoGravity:1b, PierceLevel:5, Motion:[0.000d, 0d, -5.000d]}
 
+execute as @s at @s run tp @s ~ ~0.1 ~
 execute as @e[tag=hk.spirit, limit=1, sort=nearest] at @s run scoreboard players set @s hk.spirit.timer -40
+execute as @s at @s run summon pig ~ ~ ~ {Tags:[hk.spirit.ride], active_effects:[{id:invisibility, duration:999999, show_particles:false}], NoAI:true, NoGravity:true, Silent:true, DeathLootTable:"minecraft:entities/wandering_trader"}
+ride @s mount @e[tag=hk.spirit.ride, limit=1, sort=nearest]
+execute as @s at @s run data modify entity @e[type=pig, tag=hk.spirit.ride, limit=1, sort=nearest] DeathTime set value 10
+execute as @s at @s run kill @e[type=pig, tag=hk.spirit.ride]
