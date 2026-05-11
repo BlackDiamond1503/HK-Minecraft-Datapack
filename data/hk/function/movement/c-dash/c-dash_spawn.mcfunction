@@ -39,3 +39,6 @@ execute as @s if score @s hk.yaw matches 176..180 at @s rotated ~ 0 run summon a
 ride @s mount @e[tag=hk.c-dash, limit=1, sort=nearest]
 scoreboard players set @s hk.c-dash.charge_time 0
 scoreboard players set @s hk.c-dash.using 1
+playsound entity.generic.explode ui @s
+playsound block.amethyst_block.resonate ui @s
+playsound item.elytra.flying ui @s

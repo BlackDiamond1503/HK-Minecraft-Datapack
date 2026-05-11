@@ -34,6 +34,11 @@ execute as @a[scores={hk.c-dash.charge_time=1..}] at @s unless predicate hk:snea
 execute as @a[scores={hk.c-dash.charge_time=6..}] at @s run scoreboard players set @s hk.c-dash.charge_time 6
 execute as @a[scores={hk.c-dash.using=1..}] at @s run function hk:movement/c-dash
 
+execute as @a[scores={hk.c-dash.charge_time=1..5}, predicate=hk:on_ground, predicate=hk:sneaking] at @s run particle minecraft:dust_color_transition{from_color:[1.0, 0.4, 0.9], to_color:[0.7, 0.0, 1.0], scale:0.8} ~ ~1 ~ 0.25 0.35 0.25 0.0 10 force @a
+execute as @a[scores={hk.c-dash.charge_time=1..5}, predicate=hk:on_ground, predicate=hk:sneaking] at @s run particle minecraft:dust_color_transition{from_color:[0.9, 0.3, 0.8], to_color:[0.6, 0.1, 1.0], scale:1.2} ~ ~1 ~ 0.35 0.45 0.35 0.0 14 force @a
+
+execute as @a[scores={hk.c-dash.charge_time=1..5, hk.2-ticks=..0}, predicate=hk:on_ground, predicate=hk:sneaking] at @s run playsound minecraft:block.amethyst_cluster.break player @a ~ ~ ~ 0.9 1.6
+
 # Focus Time
 execute as @a[scores={hk.soul.focus.time=1..}] at @s unless items entity @s weapon.mainhand carrot_on_a_stick[custom_data~{hk_soul_item:1}] run scoreboard players set @s hk.soul.focus.time 0
 execute as @a[scores={hk.soul.focus.time=1..}] at @s unless predicate hk:sneaking run scoreboard players set @s hk.soul.focus.time 0
@@ -49,6 +54,18 @@ function hk:soul/ui
 execute as @a[scores={hk.use=1..}] at @s run scoreboard players set @s hk.use 0
 execute as @a[scores={hk.nail.swing=1..}] at @s run scoreboard players set @s hk.nail.swing 0
 execute as @a[scores={hk.sneak=1..}] at @s run scoreboard players set @s hk.sneak 0
+
+# "Tickers" 
+scoreboard players add @a hk.2-ticks 1
+execute as @a if score @s hk.2-ticks matches 2.. run scoreboard players set @s hk.2-ticks 0
+scoreboard players add @a hk.5-ticks 1
+execute as @a if score @s hk.5-ticks matches 5.. run scoreboard players set @s hk.5-ticks 0
+scoreboard players add @a hk.10-ticks 1
+execute as @a if score @s hk.10-ticks matches 10.. run scoreboard players set @s hk.10-ticks 0
+scoreboard players add @a hk.15-ticks 1
+execute as @a if score @s hk.15-ticks matches 15.. run scoreboard players set @s hk.15-ticks 0
+scoreboard players add @a hk.20-ticks 1
+execute as @a if score @s hk.20-ticks matches 20.. run scoreboard players set @s hk.20-ticks 0
 
 # Dying sequence
 execute as @a[scores={hk.health=..0}] at @s run function hk:systems/death

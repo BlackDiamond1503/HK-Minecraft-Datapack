@@ -6,7 +6,8 @@
         "damage": {
           "type": {
             "tags": [
-                {"id":"hk:wind_charge_damage", "expected":false }
+                {"id":"hk:wind_charge_damage", "expected":false },
+                {"id":"is_drowning", "expected":false}
             ] 
           }
         }

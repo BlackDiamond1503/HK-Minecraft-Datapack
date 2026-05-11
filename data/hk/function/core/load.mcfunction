@@ -47,6 +47,13 @@ scoreboard objectives add hk.spirit.timer dummy
 
 scoreboard players set @a hk.iframes 0
 
+# Time loops
+scoreboard objectives add hk.2-ticks dummy
+scoreboard objectives add hk.5-ticks dummy
+scoreboard objectives add hk.10-ticks dummy
+scoreboard objectives add hk.15-ticks dummy
+scoreboard objectives add hk.20-ticks dummy
+
 gamerule natural_health_regeneration false
 gamerule fall_damage false
 gamerule keep_inventory true
