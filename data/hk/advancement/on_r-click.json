@@ -1,0 +1,23 @@
+{
+  "criteria": {
+    "interact_with_anything": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "equipment": {
+                "mainhand": {"items":["minecraft:carrot_on_a_stick"]}
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "hk:dream_nail/dream_nail"
+  }
+}

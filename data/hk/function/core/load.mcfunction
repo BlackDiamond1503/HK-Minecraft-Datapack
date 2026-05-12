@@ -54,6 +54,9 @@ scoreboard objectives add hk.10-ticks dummy
 scoreboard objectives add hk.15-ticks dummy
 scoreboard objectives add hk.20-ticks dummy
 
+# Dream nail
+scoreboard objectives add hk.dream_nail.random_idx dummy
+
 gamerule natural_health_regeneration false
 gamerule fall_damage false
 gamerule keep_inventory true

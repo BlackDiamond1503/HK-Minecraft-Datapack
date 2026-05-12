@@ -17,6 +17,7 @@ execute as @a[scores={hk.dash.used=1..}] if score @s hk.tp matches 1 run scorebo
 # Soul use
 execute as @a[scores={hk.use=1..}] unless score @s hk.c-dash.using matches 1.. if items entity @s weapon.mainhand carrot_on_a_stick[custom_data~{hk_soul_item:1}] run function hk:soul/use
 
+
 # Timers
 execute as @a[scores={hk.soul.spell_use_timer=..0}] at @s run scoreboard players add @s hk.soul.spell_use_timer 1
 execute as @a[scores={hk.dash.colldown_left=..0}] at @s run scoreboard players add @s hk.dash.colldown_left 1
