@@ -1,9 +1,7 @@
 {
   "pack": {
-    "description": "§6Hollow Knight §7| Datapack",
-    "min_format": 101,
-    "max_format": 101,
-    "pack_format": 101,
-    "supported_formats": 101
+    "description": "Hollow Craft",
+    "min_format": 121,
+    "max_format": 121
   }
 }

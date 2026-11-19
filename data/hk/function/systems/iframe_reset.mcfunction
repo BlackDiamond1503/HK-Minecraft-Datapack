@@ -1,1 +1,0 @@
-scoreboard players set @a[scores={hk.iframes=1}] hk.iframes 0

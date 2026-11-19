@@ -1,1 +1,0 @@
-execute as @a run attribute @s gravity base set 0.06
