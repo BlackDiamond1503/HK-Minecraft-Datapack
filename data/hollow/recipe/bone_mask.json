@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "H H",
+    "HGH"
+  ],
+  "key": {
+    "G": "minecraft:bone_block",
+    "H": "minecraft:bone"
+  },
+  "result": {
+    "id": "minecraft:leather_helmet",
+    "components": {
+        "item_name": "Bone Mask",
+        "lore": ["An empty shell, a vessel for something greater"],
+        "rarity": "uncommon",
+        "item_model": "hollow:bone_mask"
+    },
+    "count": 1
+  }
+}   

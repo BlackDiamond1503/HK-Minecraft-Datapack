@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:ore",
+  "targets": [
+    {
+      "target": {
+        "predicate_type": "minecraft:block_match",
+        "block": "minecraft:lava"
+      },
+      "state": {
+        "id": "minecraft:water",
+        "properties": {
+          "level": "0"
+        }
+      }
+    }
+  ],
+  "size": 64,
+  "discard_chance_on_air_exposure": 0
+}

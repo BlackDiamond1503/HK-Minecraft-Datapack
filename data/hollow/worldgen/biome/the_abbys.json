@@ -1,0 +1,51 @@
+{
+  "attributes": {
+    "minecraft:gameplay/natural_mob_spawns": {
+      "argument": {
+        "spawn_costs": {},
+        "spawns_by_category": {
+          "ambient": [],
+          "monster": [],
+          "water_ambient": []
+        }
+      },
+      "modifier": "overlay"
+    },
+    "minecraft:visual/sky_color": "#0d0d0d",
+    "minecraft:audio/background_music": {
+      "modifier": "override",
+      "argument": {}
+    },
+    "minecraft:audio/music_volume": 0,
+    "minecraft:visual/fog_color": 0,
+    "minecraft:visual/ambient_particles": [
+      {
+        "particle": {
+          "type": "minecraft:ash"
+        },
+        "probability": 0.5
+      }
+    ]
+  },
+  "temperature_modifier": "none",
+  "carvers": [
+    "hollow:abyss_giant_cave"
+  ],
+  "downfall": 0.4,
+  "effects": {
+    "water_color": "#050505"
+  },
+  "features": [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+        "hollow:void_pools"
+    ]
+  ],
+  "has_precipitation": false,
+  "temperature": 0.8
+}
