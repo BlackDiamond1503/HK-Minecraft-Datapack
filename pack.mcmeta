@@ -1,7 +1,8 @@
 {
   "pack": {
-    "description": "Hollow Craft",
-    "min_format": 121,
-    "max_format": 121
+    "pack_format": 97,
+    "min_format": [97, 1],
+    "max_format": 97,
+    "description": "Companion pack for Hollow Craft"
   }
-}
+}   
